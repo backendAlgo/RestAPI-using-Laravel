@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\Buyer\BuyerController;
+use App\Http\Controllers\Category\CategoryController;
+use App\Http\Controllers\Product\ProductController;
+use App\Http\Controllers\Saler\SalerController;
+use App\Http\Controllers\Transaction\TransactionController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,3 +20,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::resource('buyer', BuyerController::class, ['only' => ['index','show']]);
+
+Route::resource('category', CategoryController::class, ['except' => ['create','edit']]);
+
+Route::resource('product', ProductController::class, ['only' => ['index','show']]);
+
+Route::resource('saler', SalerController::class, ['only' => ['index','show']]);
+
+Route::resource('transaction', TransactionController::class, ['only' => ['index','show']]);
+
+Route::resource('user', UserController::class, ['except' => ['create','edit']]);
