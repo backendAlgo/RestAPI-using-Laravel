@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
         $categoriesQuantity = 30;
         $productsQuantity = 1000;
         $transactionsQuantity = 1000;
+        $usersBuyerQuantity = 50;
 
         User::factory()->count($usersQuantity)->create();
         Category::factory()->count($categoriesQuantity)->create();
@@ -38,6 +39,6 @@ class DatabaseSeeder extends Seeder
                 $product->categories()->attach($categories);
             }
         );
-        Transaction::factory(Transaction::class, $transactionsQuantity)->create();
+        Transaction::factory()->count($transactionsQuantity)->create();
     }
 }

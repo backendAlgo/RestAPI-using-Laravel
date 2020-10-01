@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Seller extends User
 {
+    use HasFactory;
     public function products() {
-        $this->hasMany(Transaction::class);
+        return $this->hasMany(Product::class);
     }
 }

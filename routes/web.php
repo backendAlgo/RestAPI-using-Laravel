@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Product;
+use App\Models\Seller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function() {
+    $seller = Seller::find(197)->products->random()->name;
+    dd($seller);
     return view('welcome');
 });
