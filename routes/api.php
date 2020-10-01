@@ -20,14 +20,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('buyer', BuyerController::class, ['only' => ['index','show']]);
+Route::resource('buyers', BuyerController::class, ['only' => ['index','show']]);
 
-Route::resource('category', CategoryController::class, ['except' => ['create','edit']]);
+Route::resource('categories', CategoryController::class, ['except' => ['create','edit']]);
 
-Route::resource('product', ProductController::class, ['only' => ['index','show']]);
+Route::resource('products', ProductController::class, ['only' => ['index','show']]);
 
-Route::resource('saler', SalerController::class, ['only' => ['index','show']]);
+Route::resource('salers', SalerController::class, ['only' => ['index','show']]);
 
-Route::resource('transaction', TransactionController::class, ['only' => ['index','show']]);
+Route::resource('transactions', TransactionController::class, ['only' => ['index','show']]);
 
-Route::resource('user', UserController::class, ['except' => ['create','edit']]);
+Route::resource('users', UserController::class, ['except' => ['create','edit']]);
