@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/', function() {
-//     $seller = Seller::find(197)->products->random()->name;
-//     dd($seller);
-//     return view('welcome');
-// });
+//
+ Route::get('/', function() {
+     $user = new \App\Models\User();
+ });

@@ -3,7 +3,7 @@
 use App\Http\Controllers\Buyer\BuyerController;
 use App\Http\Controllers\Category\CategoryController;
 use App\Http\Controllers\Product\ProductController;
-use App\Http\Controllers\Saler\SalerController;
+use App\Http\Controllers\Seller\SellerController;
 use App\Http\Controllers\Transaction\TransactionController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -26,7 +26,7 @@ Route::resource('categories', CategoryController::class, ['except' => ['create',
 
 Route::resource('products', ProductController::class, ['only' => ['index','show']]);
 
-Route::resource('salers', SalerController::class, ['only' => ['index','show']]);
+Route::resource('sellers', SellerController::class, ['only' => ['index','show']]);
 
 Route::resource('transactions', TransactionController::class, ['only' => ['index','show']]);
 
